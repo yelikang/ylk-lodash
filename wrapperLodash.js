@@ -142,6 +142,9 @@ function lodash(value) {
 
 // Ensure wrappers are instances of `baseLodash`.
 lodash.prototype = baseLodash.prototype;
+// 也就是 lodash.prototype.constructor = baseLodash.prototype.constructor = lodash;
+// lodash和baselodash都是lodash的子类
 lodash.prototype.constructor = lodash;
 
+// baselodash、lodashWrapper都是lodash子类
 export default lodash;
